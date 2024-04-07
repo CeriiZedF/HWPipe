@@ -1,5 +1,12 @@
 # HWPipe
 
+
+#Дизайн
+
+
+![Screenshot 2024-04-07 195816](https://github.com/CeriiZedF/HWPipe/assets/60105990/b7ff601a-0d5c-4c33-9759-8f0461ec9c9c)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
 
 ## Development server
