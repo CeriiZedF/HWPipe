@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col">
+        <h1>Users</h1>
+        <hr>
+        <p>Name:</p>
+        <input type="text"  [(ngModel)]="name">
+        <p>Salary:</p>
+        <input type="number" [(ngModel)]="salary">
+        <p>Date:</p>
+        <input type="date" [(ngModel)]="date">
+        <hr>
+        @if(!isEdit){
+            <button class="btn btn-primary" (click)="addUser()">Add</button>
+        }
+        @else{
+            <button class="btn btn-info" (click)="editUser()">Save</button>
+        }
+        <button class="btn btn-secondary">Reset</button>
+    </div>
+    <div class="col">
+        <h1>List:</h1>
+        @for(user of this.users; track $index)
+        {
+            
+            <div class="item">
+                <h3>Name: {{user.name | filter: 'name'}}</h3>
+                <p>Salary: {{user.salary | currency:'UAH' }}</p>
+                <p>Date: {{user.date | date: "MM.dd.yyyy"}} </p>
+                <button class="btn btn-warning" (click)="changeEditMode($index)">Edit </button>
+                <button class="btn btn-danger" (click)="deleteUser($index)">Delete</button>
+            </div>
+        }
+    </div>
+</div>
